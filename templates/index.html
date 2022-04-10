@@ -1,2 +1,17 @@
-<button onclick="location.href='/2'"> drug 1 </button>
-<button onclick="location.href='/1'"> drug 2 </button>
+<!DOCTYPE html>
+
+{% load static %}
+<link rel='stylesheet' type="text/css" href="{% static './index.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div class='wrapper'>
+  <div class='header'> Select Drug </div>
+  <div>
+    <button class='button-select' onclick="location.href='/2'"> DRUG 1 </button>
+    <button class='button-select' onclick="location.href='/1'"> DRUG 2 </button>
+  </div>
+</div>

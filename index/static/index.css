@@ -1,0 +1,39 @@
+body {
+  min-height: 100vh;
+  height: 100%;
+  font-family: 'Red Hat Mono', monospace;
+  background-color: #8ee4af
+}
+
+.wrapper {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 500px;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  margin: 10px;
+  font-size: 40px
+}
+
+.button-select {
+  height: 60px;
+  width: 120px;
+  font-size: 20px;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  transition: background 0.2s linear;
+}
+
+.button-select:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.2s linear;
+}
+
+.option-block {
+  background: red;
+  display: inline-block;
+}
