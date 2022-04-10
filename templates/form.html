@@ -1,0 +1,18 @@
+<form>
+{% for n in form.fields %}
+  <label for={{n.label}}>{{n.label}}</label>
+    {% if n.type == 'dropdown' %}
+      <select key={{n.key}}>
+        {% for m in n.items %}
+          <option value={{m.value}}>{{m.text}} </option>
+        {% endfor %}
+      </select>
+    {% else %}
+      <input type={{n.type}} key={{n.key}} required={{n.isRequired}}/>
+      {% if unit != '' %}
+        <p>{{n.unit}}</p>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</form>
+<input type='submit' value='submit'/>
