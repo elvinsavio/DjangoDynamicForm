@@ -7,25 +7,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
+<button class="button-select"  onclick="location.href='/'"> Back </button>
 <div class='wrapper'>
-  <form class="form">
-  {% for n in form.fields %}
-    <label class="label-class" for={{n.label}}>{{n.label}}</label>
-      {% if n.type == 'dropdown' %}
-        <select class='input-dropdown' key={{n.key}}>
-          {% for m in n.items %}
-            <option value={{m.value}}>{{m.text}} </option>
-          {% endfor %}
-        </select> </br>
-      {% else %}
-        <input class='input-text' type={{n.type}} key={{n.key}} required={{n.isRequired}}/>
-        {% if unit != '' %}
-          <p>{{n.unit}}</p>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </form>
-  <input class='button-select' type='submit' value='submit'/>
+  <form>
+    <div class='form-block'>
+      {% for n in form.fields %}
+      <div class="input-block">
+        <label class="label bold" for={{n.label}}>{{n.label}}</label>
+          {% if n.type == 'dropdown' %}
+            <select class='input' key={{n.key}}>
+              {% for m in n.items %}
+                <option  class="select" value={{m.value}}>{{m.text}} </option>
+              {% endfor %}
+            </select>
+          {% else %}
+              <input class='input' type={{n.type}} key={{n.key}}  required/>
+            {% if unit != '' %}
+              <div class="unit"> {{n.unit}} </div>
+            {% endif %}
+          </br>
+          {% endif %}
+        </div>
+        {% endfor %}
+        <div class="submit">
+          <input class='button-select sumbit' type='submit' value='submit'/>
+        </div>
+      </form>
+    </div>
 </div>
