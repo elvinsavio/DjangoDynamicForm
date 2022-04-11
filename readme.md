@@ -1,11 +1,16 @@
-run localsever- python3 manage.py runserver
+#run localsever
+
+```bash
+python3 manage.py runserver
+```
 
 
-creates forms based on json data stored locally
+#desc
+creates forms based on json data stored locally <br/>
 
-./index/static
-drug[n].json
+./index/static <br/>
+drug[n].json <br/>
 
-html auto validation
-renders based on order value [ascending]
-drug3.json for unorderes json 
+html auto validation <br/>
+renders based on order value [ascending] <br/>
+drug3.json for unorderes json <br/>
