@@ -9,9 +9,9 @@ def load(name):
         f = open('./static/drug'+name+'.json','r')
         data = json.load(f)
         line = sorted(data['fields'], key=lambda k: k.get('order', 0)) #ordering json
+        return line
     except:
         print(f'Error')
-    return line
 
 def index(request):
     return render(request, 'index.html')
