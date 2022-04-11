@@ -4,20 +4,18 @@ from django.shortcuts import render
 import json
 from django.http import HttpResponse
 
-f1 = open('./static/drug1.json','r') #load local
-f2 = open('./static/drug2.json','r') #load local
-
-
-def index(request):
-    return render(request, 'index.html')
-
 def load(name):
     try:
         f = open('./static/drug'+name+'.json','r')
         data = json.load(f)
+        line = sorted(data['fields'], key=lambda k: k.get('order', 0)) #ordering json
     except:
         print(f'Error')
-    return data
+        return line
+
+def index(request):
+    return render(request, 'index.html')
+
 
 
 def form(request, drug):

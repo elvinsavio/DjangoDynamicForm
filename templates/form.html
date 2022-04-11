@@ -11,7 +11,7 @@
 <div class='wrapper'>
   <form>
     <div class='form-block'>
-      {% for n in form.fields %}
+      {% for n in form %}
       <div class="input-block">
         <label class="label bold" for={{n.label}}>{{n.label}}</label>
           {% if n.type == 'dropdown' %}
