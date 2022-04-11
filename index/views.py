@@ -11,7 +11,7 @@ def load(name):
         line = sorted(data['fields'], key=lambda k: k.get('order', 0)) #ordering json
     except:
         print(f'Error')
-        return line
+    return line
 
 def index(request):
     return render(request, 'index.html')
